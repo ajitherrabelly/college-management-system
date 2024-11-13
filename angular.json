@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "projects": {
+      "college-management-system": {
+        "projectType": "application",
+        "root": "src/main/frontend",
+        "sourceRoot": "src/main/frontend/src",
+        "prefix": "app",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:browser",
+            "options": {
+              "outputPath": "src/main/resources/static",
+              "index": "src/main/resources/static/index.html",
+              "main": "src/main/frontend/src/main.ts",
+              "polyfills": "src/main/frontend/src/polyfills.ts",
+              "tsConfig": "src/main/frontend/tsconfig.app.json",
+              "assets": [
+                "src/main/frontend/src/assets"
+              ],
+              "styles": [
+                "src/main/frontend/src/styles.css"
+              ],
+              "scripts": []
+            }
+          },
+          "serve": {
+            "builder": "@angular-devkit/build-angular:dev-server",
+            "options": {
+              "browserTarget": "college-management-system:build"
+            }
+          }
+        }
+      }
+    },
+    "defaultProject": "college-management-system"
+  }
+  
